@@ -1,0 +1,22 @@
+/* Allow interaction with YouTube player */
+.annotation-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none; /* Allows clicks to pass through */
+}
+
+.annotation-overlay * {
+  pointer-events: auto; /* Enable annotation interactions */
+}
+
+/* Ensure drawn annotations are visible */
+.annotation-box,
+.annotation-circle {
+  position: absolute;
+  border: 2px solid red;
+  background: rgba(255, 0, 0, 0.2);
+}

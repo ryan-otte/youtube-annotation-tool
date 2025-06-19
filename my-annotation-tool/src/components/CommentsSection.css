@@ -1,0 +1,12 @@
+.comment-section {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #f4f4f4;
+  }
+  
+  .comment-time {
+    color: blue;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  

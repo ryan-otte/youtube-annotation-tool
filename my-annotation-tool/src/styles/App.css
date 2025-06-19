@@ -1,0 +1,20 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .App {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .video-player {
+    margin: 20px auto;
+  }
+  
+  .toolbar {
+    margin: 10px auto;
+  }
+  

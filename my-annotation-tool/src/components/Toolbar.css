@@ -1,0 +1,36 @@
+/* ===== Toolbar Styles ===== */
+.toolbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .toolbar button {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    background: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .toolbar button:hover {
+    background: #007bff;
+    color: white;
+  }
+  
+  .toolbar button.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+  
+  .color-picker {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  

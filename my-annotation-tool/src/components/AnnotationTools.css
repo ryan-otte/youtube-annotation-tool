@@ -1,0 +1,39 @@
+.annotation-tools {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .tools {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .tools button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .tools button.active {
+    background: #007bff;
+    color: white;
+  }
+  
+  .color-picker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .color-picker input {
+    border: none;
+    width: 40px;
+    height: 40px;
+  }
+  

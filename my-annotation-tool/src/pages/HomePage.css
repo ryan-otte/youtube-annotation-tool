@@ -1,0 +1,367 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* User bar with proper spacing */
+.user-bar {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  width: 100%;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.user-bar span {
+  margin-right: auto;
+  font-weight: bold;
+}
+
+.user-bar-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Increase spacing between buttons */
+}
+
+.shared-annotations-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.shared-annotations-button:hover {
+  background-color: #0069d9;
+}
+
+.logout-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.logout-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Admin link styling */
+.admin-link {
+  margin-right: 15px;
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: rgba(74, 144, 226, 0.1);
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.admin-link:hover {
+  background-color: rgba(74, 144, 226, 0.2);
+}
+
+/* Toolbar layout to match the screenshot */
+.toolbar-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 15px;
+}
+
+/* First row of tools */
+.toolbar-row-1 {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+/* Second row for undo/redo and mouse mode */
+.toolbar-row-2 {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+/* Button styling */
+.toolbar-row-1 button,
+.toolbar-row-2 button {
+  width: 120px;
+  height: 35px;
+  background-color: #e0e0e0;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.toolbar-row-1 button:hover,
+.toolbar-row-2 button:hover {
+  background-color: #d0d0d0;
+}
+
+.toolbar-row-1 button.active,
+.toolbar-row-2 button.active,
+.toolbar-row-2 button.mouse-active {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Special styling for mouse mode button */
+.toolbar-row-2 button.mode-button.mouse-active {
+  background-color: #28a745;
+  color: white;
+}
+
+.toolbar-row-1 button:disabled,
+.toolbar-row-2 button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Video input styling - FIXED */
+.video-input {
+  display: flex;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto 15px;
+}
+
+.video-input input {
+  flex: 1;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+.video-input button {
+  width: 120px; /* Fixed width button */
+  height: 40px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* Video container */
+.video-container {
+  position: relative;
+  width: 960px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  margin-bottom: 20px;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+/* Color and annotation options row */
+.options-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 960px;
+  margin: 15px auto;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.color-picker {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.color-picker label {
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.annotation-display-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.annotation-display-toggle label {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Annotation overlay */
+.annotation-overlay-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.annotation-overlay-wrapper.mouse-mode {
+  pointer-events: none;
+}
+
+.annotation-overlay-wrapper.draw-mode {
+  pointer-events: auto;
+}
+
+.mouse-mode-indicator {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  z-index: 20;
+}
+
+/* Video info display */
+.video-info {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.video-info span {
+  padding: 5px 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+}
+
+/* Save button */
+.save-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px auto;
+  display: block;
+}
+
+.save-button:hover {
+  background-color: #218838;
+}
+
+/* Viewing user banner */
+.viewing-user-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 960px;
+}
+
+.viewing-user-banner p {
+  margin: 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.view-my-annotations-button {
+  padding: 6px 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.2s ease;
+}
+
+/* Overlay for shared annotations panel */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* Auth container */
+.auth-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading state */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 20px;
+  color: #3498db;
+}
+
+/* Responsive adjustments */
+@media (max-width: 960px) {
+  .video-container, 
+  .toolbar-container,
+  .options-row,
+  .video-input,
+  .viewing-user-banner {
+    width: 100%;
+  }
+  
+  .toolbar-row-1,
+  .toolbar-row-2 {
+    flex-wrap: wrap;
+  }
+}
