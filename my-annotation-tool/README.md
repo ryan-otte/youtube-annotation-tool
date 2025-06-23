@@ -21,8 +21,7 @@ This tool allows users to annotate YouTube videos with custom shapes, colors, an
 
 1. Clone the repository:
    ```
-   git clone https://campus.cs.le.ac.uk/gitlab/ug_project/24-25/ro113.git
-   cd my-annotation-tool
+  https://github.com/ryan-otte/youtube-annotation-tool.git
    ```
 
 2. Install dependencies for both backend and frontend:
