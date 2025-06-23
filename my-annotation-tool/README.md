@@ -35,8 +35,7 @@ This tool allows users to annotate YouTube videos with custom shapes, colors, an
 ### Starting the Backend Server
 
 1. Navigate to the project root directory:
-   ```
-   cd C:\Users\renzm\OneDrive\Documents\project\ro113\finalproj\my-annotation-tool
+   
    ```
 
 2. Start the backend server:
@@ -51,8 +50,6 @@ This tool allows users to annotate YouTube videos with custom shapes, colors, an
 1. Open a new terminal window (keep the backend running in the first terminal)
 
 2. Navigate to the project root directory again:
-   ```
-   cd C:\Users\renzm\OneDrive\Documents\project\ro113\finalproj\my-annotation-tool
    ```
 
 3. Start the frontend application:
